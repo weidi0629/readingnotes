@@ -34,5 +34,64 @@
 -- process.nextTick
   - put a callback function at nextloop of nodes event loop 
   
+-- Buffer 
+  - native and fast support to handle binary data - 
+  - 搞 unicode string 互相convert 
+    - character encoding 
+    - var buffer = new Buffer(str, 'utf-8');
+
+-- global
+  - global.something =123; 
+  - 最好不要用
   
-  pending Buffer page50 
+
+-- Core Modules 
+  -- Path Module 
+    - var path = require('path')
+    - path.normalize(str) -- fix up slashes to be OS specific 
+    - path.join([str1],[str2])
+    - dirname, basename, extname 
+    
+  -- fs Module 
+    - filesystem, 处理文件 
+    - delete file sync/async
+      - unlink('file',callback) - 最好用这个，因为读写硬盘比较慢 
+  
+  -- os module
+    - 知道系统的一些参数 
+  
+  -- util module - general purpose
+    - util.log -> log out to console with timestamp 
+    - string format
+      - util.format 有点像 c++ print
+        - util.format('%s has %d dollars', name, money)
+        
+   -- AMD  
+      - server 端代码可以优化--把东西抓到内存里，但是browser不行，每次都要有个request
+        - solution: async, parallel: declear at front and set callback -> async module definition AMD 
+          - define(['./foo', './bar'], function(foo, bar){ 
+             browser 就知道 这边code可以继续直接下去，不用等loading foo，bar 
+             - 但是要使用的话，需要third part 支持，比如 requirejs
+             page 56有例子
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      
+
+
+
