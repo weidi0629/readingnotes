@@ -8,5 +8,10 @@
   - var json = JSON.stringify(foo);
   
 -- NPM
-
-pending page 76 Semantic Versioning in NPM / package.json
+  - 如果install的时候加了 -g，表示globally command line都可以用的，否则就要用require
+    - npm install -g package 
+    
+  -- main 是唯一一个node会主动去执行的文件
+    - 路径写在 package.json里 
+   
+-- pending Popular Node.js Packages
