@@ -14,4 +14,9 @@
   -- main 是唯一一个node会主动去执行的文件
     - 路径写在 package.json里 
    
--- pending Popular Node.js Packages
+-- Popular Node.js Packages
+  - _集成了一些功能：
+    - var results = _.filter(foo, function (item) { return item > 100 });
+    - 还有 _.map, _.reject, 
+  
+pending Handling Command Line Arguments
