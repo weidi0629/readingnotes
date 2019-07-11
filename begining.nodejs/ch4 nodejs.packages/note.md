@@ -19,4 +19,34 @@
     - var results = _.filter(foo, function (item) { return item > 100 });
     - 还有 _.map, _.reject, 
   
-pending Handling Command Line Arguments
+-- Handling Command Line Arguments
+  -- optimist: var argv = require('optimist').argv;
+    - flag, parameters 
+    
+-- Handling Date/Time Using Moment
+    - npm install moment -> var moment = require('moment');
+    
+    -- serializing dates 
+      date.toJSON() <-->  new Date(jsonString)
+
+-- Customizing Console Colors
+  - npm install coloro 更改console的颜色 
+    - console.log('hello'.green);
+  - how it works?
+    - getter/set __defineGetter__/__defineSetter__ member 就可以在member后面直接加点呼叫了
+      - foo.__defineSetter__('bar', function (val) {
+            console.log('set bar was called with value:',val);
+        foo.bar = 'something';
+
+
+
+
+
+
+
+
+
+
+
+
+
