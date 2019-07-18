@@ -88,15 +88,30 @@
   - support UNIX concept of signals: strl+c 
     - process.on('SIGINT', function ()
  
- pending ### streams ### 
+ --  ### streams ### 
+  - sending chunk of file 
+  - duplex 既能写又能读 
+  - transform stream， output is computted from input 
   
+  -- Stream class in node.js 
+    - require('stream')
+    - inheritate from EventEmitter: Readable Writable Duplex Transform
+     
+    -- pipe function 
+      - mimics the | 
+      - some example 
+        - readableStream.pipe(process.stdout); 
+        - inp.pipe(gzip).pipe(out);
+        
+    -- details:
+      - readable, 主要是有个event 叫 readable 每次有新的data 在stream里面，他就会raise 
+        - process.stdin.on('readable', function () {
   
-  
-  
-  
-  
-  
-  
+    -- create your own stream
+      - readable
+        - 注意内置的push function 
+      - writable 
+        - 
   
   
   
