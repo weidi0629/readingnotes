@@ -28,10 +28,32 @@
   - 都是一些 key-value
     - 'user-agent': 'curl/7.30.0',
     - host: '127.0.0.1:3000',
+     
+-- Creating Your Own File Web Server
+  
+-- Introducing Connect
+  - middleware, sit between app and 底层API 
+  - listen function can replace previous http的定义 
+  
+  - create a connect dispatcher
+    - var app = connect();
+    - 只是一个内置的接受request/response的function，所以可以作为createServer的参数 
+       var app = connect();
+       http.createServer(app)
+  
+  -- Creating a Connect Middleware   
+    - ‘use’ function take three arguments:
+      - request/response/next: pass control to next middleware 
     
-    
--- pending Creating Your Own File Web Server
-    
+  -  Mounting Middleware by Path Prefix
+    - .use('/echo', echo) 如果 request里有 /echo才会处理 
+   
+   pending Using an Object as Middleware
+   
+   
+   
+   
+   
     
     
     
