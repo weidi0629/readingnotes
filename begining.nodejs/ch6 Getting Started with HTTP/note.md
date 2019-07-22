@@ -48,10 +48,58 @@
   -  Mounting Middleware by Path Prefix
     - .use('/echo', echo) 如果 request里有 /echo才会处理 
    
-   pending Using an Object as Middleware
+  -- Using an Object as Middleware
+    - 主要这个obj有 handle method 
+      - 直接扔到use function里面去 
    
-   
-   
+-- The Power of Chaining
+
+   -- Sharing Request/Response Information
+    - request/response objects passed into each middleware are mutable and shared
+      - 可以前面一个middleware先处理一下 
+      - 有个parse json的小例子 
+     
+    - Chaining Sample: Verifying Requests/Restricting Access
+      - 如果不calling next(), 就不会往下一层的 middleware 
+      - utility 里面自动的返回一个需要用户名密码的窗口 
+        - res.writeHead(401 , {'WWW-Authenticate': 'Basic'}); 
+    
+   -- Raising a connect Error
+     - pass an argument to ‘next’， 告诉他connect 出了点问题 
+     - use(function (req, res, next) { next('An error has occurred!') })
+     - 如果你继续想process， 需要 register一个四个parameters 的middleware 
+        - .use(function (req, res, next) { next(new Error('Big bad error details')); })
+           ...
+           .use(function (err, req, res, next) { .. 
+        - 随便哪里call都可以 
+        
+   -- https
+      - browser generate a pre-master session key, 只能用在这个browser在这个session里面
+      - 之后还是跟HTTP 一样 
+    
+      -- node.js 的https
+        - 让你有个option指定 private/public key
+          - options = { key: fs.readFileSync('./key.pem'),
+             cert: fs.readFileSync('./cert.pem')};
+             ...
+            https.createServer(options, function (req, res) {
+    
+         - 可以redirect request from 80 to 433 
+          - res.writeHead(301, { "Location": "https://" + req.headers['host'] + req.url });
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
    
    
     
