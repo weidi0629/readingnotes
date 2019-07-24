@@ -63,23 +63,44 @@
     .use(compression())
   - in default is 1 kb, you can specify compression({threshold: 512})
   
+-- Time-out Hanging Requests  
+    - var timeout = require('connect-timeout');
+      .use('/api', timeout(5000),
+      
+    - 如果想抓timeout exception 
+      - function (error, req, res, next) {
+          if (req.timedout) {
+          
+    - using use(haltOnTimedout)来防止timeout的function继续往前
   
   
+### Express Response Object ### - 从背后已经给你转成一个obj了 
+
+- chainable 
+  - res.status(200).end('Hello world!');
+- res.set({
+- simple redirect 
+
+-- simplifying send 
+  - res.send([body|status],[body]).
   
+### Express Request Object ###  
   
+  - easy to get 
+    - req.get('Content-Type');  req.is('json');
   
+  - check if comes from https 
+    - req.secure flag
   
+  -- URL Handling 
+    - URL -> req.query
+    - 直接在后面 点点点就行了。 req.query.aaa 
   
+ --  Express also assigns the response object to req.res and the request object to res.req.
+  - easy for debugging 
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
+pending understand rest page 156
   
   
   
