@@ -100,7 +100,31 @@
   - easy for debugging 
   
 
-pending understand rest page 156
+-- understand rest
+  -- need to understand the collection of items and items in collection
+    -GET PUT POST DELETE 既有对collection 也有对item的 
+    
+  - Express Application Routes 
+    - app.VERB(path, [callback...], callback)— 用 app.verb 来注册一个middleware
+      - app.get('/', function (req, res, next) {
+          res.end('get');
+          
+    -app.all to register: 只要path符合，就肯定会执行 
+  
+  -- Creating a Route Object
+    - app.route('/') 就不用每次都打 url， 看例子
+  
+  
+  -- A Deeper Look at the Path Option
+    - 可以用正则表达式等处理path
+      - app.get(/^\/[0-9]+$/, function (req, res) {
+          res.send('number!');
+  
+  
+  
+  
+  
+  
   
   
   
