@@ -119,19 +119,22 @@
     - 可以用正则表达式等处理path
       - app.get(/^\/[0-9]+$/, function (req, res) {
           res.send('number!');
+          
   
+  -- Parameter-Based Routing
+    - '/user/:userId' will match '/user/123' 
+    - 会把所有的parameter放在req.params里面
+      - req.params['userId']
+    - register a middleware: 4th parameter
+      - app.param('userId', function (req, res, next, userId)
   
+  -- Express Router Object
+    - 可以想成一个mini Express appliction
+      - express.Router()   
+    - 可以用app.use来注册 
   
-  
-  
-  pending Parameter-Based Routing
-  
-  
-  
-  
-  
-  
-  
+    - 好处在哪里
+      - because of the mount-ability of routers, we can reuse the same router at another point
   
   
   
