@@ -29,13 +29,16 @@
     -- Controller and $scope
       -- controller: sync the model and view
       - two-way data-binding, the glue is scope 
+      
+    -- $scope 类似于客户端传过来的实例 
   
     - vm, viewModel, model only for view 
     
     
-    pending 
-  Creating a Simple To-Do List Application
-  
+-- a Simple To-Do List Application
+  -- Angular Service 
+    - demoApp.service('guidService', function () {
+    - An Angular service is simply a function that Angular calls once to get an object
   
   
   
