@@ -15,7 +15,7 @@
     - try to put the cb outside try catch block 
     
     
-    pending Introduction to Promises
+    pending Introduction to Promises page 205
     
     
     
