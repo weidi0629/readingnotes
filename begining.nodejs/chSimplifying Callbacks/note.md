@@ -13,10 +13,11 @@
     - Never throw an error
     
     - try to put the cb outside try catch block 
+     
+-- Introduction to Promises
+   - some function will give you a promise and from that point on you use the then function to create and fulfill or reject promises
     
     
-    pending Introduction to Promises page 205
-    
-    
+   pending 因为这个是用来async 所以学习暂时停到这里。如果要继续可以改看其他文档。感觉这章讲述promise不是非常清楚。  
     
     
