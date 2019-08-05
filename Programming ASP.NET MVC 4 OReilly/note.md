@@ -16,6 +16,8 @@
   - default URL: 
     - {controller}/{action}/{id}
       - 主要要得到 controller 跟 action 
+      e.g  new { controller = "Home", action = "Index",  // 设定一个route的example 
+            id = UrlParameter.Optional } // Parameter defaults
     - using mapRoute() to register a route:
     - AuctionsController 后面 Controller几个字会被chop off, URL 直接打auction就可以了
 
@@ -99,15 +101,26 @@
                 
         --  HTML and URL Helpers
           - the HtmlHelper class helps you generate HTML markup and the UrlHelper class helps you generate URLs
+                    
+  -- models
+    -- 可以分为 data model and domian model 
+    
+  
+  -- putting all together
+    
+    -- controller templates 
+      - Empty MVC controller
+      - MVC controller with read/write actions and views, using Entity Framework  
         
+  --  Authentication
+    -- AuthorizeAttribute 可以放在单个controller action上，也可以整个controller上面
+      - [Authorize]
+        public ActionResult Profile() ... 甚至可以指定某一些 users
         
-        
-        
-        
-        
-        
-        
-        
+    -- The AccountController 
+      - 默认已经在里面了
+      - Login/Logoff/New user registration/Changed password 
+      - 
         
         
         
