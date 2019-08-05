@@ -89,6 +89,16 @@
            - in controller: return View("About", company);
              - The second parameter,represents the object that will be assigned to the ViewData.Model property.
            - in view():  
+             - @{ var company = (CompanyInfo)ViewData.Model; }
+                  <h1>@company.Name</h1> ... 
+                  
+           - Strongly typed views 
+            - using @model keyword
+              - @model Auction
+                <h1>@Model.Name</h1> .. 
+                
+        --  HTML and URL Helpers
+          - the HtmlHelper class helps you generate HTML markup and the UrlHelper class helps you generate URLs
         
         
         
