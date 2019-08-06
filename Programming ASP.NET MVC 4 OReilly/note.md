@@ -123,13 +123,15 @@
       - 
         
         
+ ######  ch2 ASP.NET MVC for Web Forms Developers
+      skip..
+      
+ 
+ ######  ch3 working with data 
+ -- Handling Form Posts
+   - model 跟 view里面参数的名字一定要对应      
         
-        
-        
-        
-        
-        
-        
+ -- Saving Data to a Database pending  
         
         
         
