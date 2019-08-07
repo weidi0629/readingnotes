@@ -131,15 +131,30 @@
  -- Handling Form Posts
    - model 跟 view里面参数的名字一定要对应      
         
- -- Saving Data to a Database pending  
+ -- Saving Data to a Database 
+    - System.Data.Entity.DbContext or class derived from it, 做db的gateway 
+        
+    - public DbSet<Auction> Auctions { get; set; }
+      - the application needs to save and edit instances of the Auction class in the database
+    
+    - Specifying Business Rules with Data Annotations
+      - 需要把business logic 放到model里面来
+      - data annotation
+        - [Required]
+          public string Title { get; set; }
+        - string maximum [Required, StringLength(50)]
+        - valid ranges [Range(1, 10000] 
+        - using model state 来判断，在controller里面
+          - if (ModelState.IsValid)
+       
+     -- Displaying Validation Errors 
+        - 告诉用户哪里出错了
+        - 学会使用 @Html.ValidationSummary()； @Html.ValidationMessageFor(model => model.Title)
         
         
-        
-        
-        
-        
+### ch4 Client-Side Development ### 
 
-
+penging responding to events 
 
 
 
