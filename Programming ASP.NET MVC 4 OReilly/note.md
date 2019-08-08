@@ -154,12 +154,46 @@
         
 ### ch4 Client-Side Development ### 
 
-penging responding to events 
+-- Responding to events 
+  - $(function) is a shortcut that tells jQuery to attach the event handlers once the DOM is loaded in the browser
 
+-- DOM Manipulation   
 
-
-
-
+-- AJAX - Asynchronous JavaScript and XML
+  - does not have to wait for the full page to load 增加使用度 
+  
+  - heart of AJAX is the XmlHttpRequest object
+    - var xhr = new XMLHttpRequest(); ... 操作这个
+  
+  - Asynchronous and call back 
+    - xhr.open("GET", "http://www.google.com/", true); 这个 true
+    - must attach any callbacks before issuing xhr.send(), or they will not be called.
+    - jQuery version:
+      $.ajax("google.com") ... 
+  
+-- Client Side Validation 
+  - enable/disable at web.config
+  - take advantage of the DataAnnotation attributes
+  
+  
+### ch5  Web Application Architecture  ###  
+  
+  pending 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
 
 
