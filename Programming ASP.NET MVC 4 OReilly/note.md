@@ -178,7 +178,46 @@
   
 ### ch5  Web Application Architecture  ###  
   
-  pending 
+-- SOLID
+  - The Single Responsibility Principle
+    - one obj should have only one responsibility
+      - e.g. different controllers for different screens
+      
+  - The Open/Closed Principle    
+    - open for extension, but closed for modification  
+      - 多用继承，少加 method 
+      - 用interface
+   
+  - The Liskov Substitution Principle
+    - objects should be easily replaceable by instances of their subtypes
+  
+  -- The Interface Segregation Principle
+    - no big base class, have more small specific interface
+  
+    - 在controller里面直接加使用interface， 看哪个class/model会进来
+  
+  -- The Dependency Inversion Principle
+    - components that depend on each other should interact via an abstraction and not directly with a concrete implementation.
+      - e.g relying on an abstract class or interface to communicate with a data access layer,
+  
+  -- Inversion of Control 
+    - Understanding dependencies
+    
+    pending page 106
+  
+  
+  
+  
+  
+  
+  
+  
+      
+      
+      
+      
+      
+      
   
   
   
